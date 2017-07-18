@@ -11,14 +11,13 @@ public class Contact {
     private Relationship relationship;
 
 
-    public String to_phone(int number) {
-        String phone_num="";
-        String format = Integer.toString(number);
-        if (format.length() == 10) {
+    public String to_phone(String number) {
+        String phone_num = "";
+        if (number.length() == 10) {
             phone_num = String.format("(%s)%s-%s",
-                    format.substring(0, 3),
-                    format.substring(3, 6),
-                    format.substring(6, 10));
+                    number.substring(0, 3),
+                    number.substring(3, 6),
+                    number.substring(6, 10));
         }
         return phone_num;
     }
@@ -45,7 +44,7 @@ public class Contact {
         return last_name;
     }
 
-    public void setPhoneNumber(int number){
+    public void setPhoneNumber(String number){
         phone_number = to_phone(number);
     }
     public String getPhoneNumber(){
@@ -61,7 +60,7 @@ public class Contact {
 
 
 
-    public Contact(String first, String last, int num, Relationship rel){
+    public Contact(String first, String last, String num, Relationship rel){
         this.setFirstName(first);
         this.setLastName(last);
         this.setPhoneNumber(num);

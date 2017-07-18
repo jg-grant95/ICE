@@ -1,5 +1,6 @@
 package com.example.jerringiselle.ice;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -33,12 +34,16 @@ public class CreateContactActivity extends AppCompatActivity {
         Contact contact = new Contact();
         contact.setFirstName(first.getText().toString());
         contact.setLastName(last.getText().toString());
-       // contact.setPhoneNumber(phone.getText());
+        contact.setPhoneNumber(phone.getText().toString());
         contact.setRelationship(typeRelationship(spinner.getSelectedItem().toString()));
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("contact");
         myRef.push().setValue(contact);
+
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+
 
     }
 

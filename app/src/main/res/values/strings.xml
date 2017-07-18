@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ICE</string>
+    <string-array name="relationship">
+        <item>father</item>
+        <item>mother</item>
+        <item>guardian</item>
+        <item>SO</item>
+        <item>husband</item>
+        <item>wife</item>
+        <item>sister</item>
+        <item>brother</item>
+        <item>friend</item>
+        <item>Other</item>
+    </string-array>
+</resources>

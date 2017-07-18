@@ -58,7 +58,11 @@ public class Contact {
         return relationship;
     }
 
+    public String toString(){
+        return first_name +" "+ last_name+"\n"+
+                relationship;
 
+    }
 
     public Contact(String first, String last, String num, Relationship rel){
         this.setFirstName(first);
